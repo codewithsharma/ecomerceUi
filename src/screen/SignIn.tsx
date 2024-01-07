@@ -2,27 +2,23 @@ import styled from "styled-components";
 import Image from "../assets/Login.png";
 import { Link } from "react-router-dom";
 
-
-
 const Container = styled.div`
   display: flex;
-  margin:  auto;
+  margin:auto;
   align-items: center;
   justify-content: center;
 
-
   @media only screen and (max-width: 480px) {
-
     margin: auto;
     display: flex;
     flex-direction: column;
-  
+
     align-items: center;
     justify-content: center;
   }
 `;
 
-const SignInLink = styled(Link)`
+const SignUpLink = styled(Link)`
   font-weight: 600;
   color: #38cb89;
   text-decoration: none;
@@ -38,13 +34,12 @@ const Button = styled.button`
   border-radius: 10px;
 `;
 
-const SignUpContainer = styled.div`
+const SignInContainer = styled.div`
+  width: 400px;
   display: flex;
   padding: 20px;
   margin: 20px;
   flex-direction: column;
-  width: 400px;
-  
 
   h2 {
     margin-bottom: 10px;
@@ -59,12 +54,16 @@ const SignUpContainer = styled.div`
 `;
 
 const Links = styled(Link)`
-  font-weight: 600;
+  font-weight: 500;
+  font-size: 12px;
   color: black;
   text-decoration: none;
 `;
 
 const Label = styled.label`
+  display: flex;
+  align-items: center;
+  gap: 6px;
   font-size: 13px;
   color: gray;
 `;
@@ -83,7 +82,7 @@ const CheckBox = styled.div`
   margin: 10px 0 20px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   gap: 8px;
 `;
 
@@ -92,7 +91,7 @@ const Form = styled.form`
   flex-direction: column;
 `;
 
-const SignUpImage = styled.img`
+const SignInImage = styled.img`
   width: 500px;
 
   @media only screen and (max-width: 600px) {
@@ -102,37 +101,32 @@ const SignUpImage = styled.img`
   }
 `;
 
-const SignUp = () => {
+const SignIn = () => {
   return (
-    
-      <Container>
-        <SignUpImage src={Image} />
+    <Container>
+      <SignInImage src={Image} />
 
-        <SignUpContainer>
-          <h2>Sign up</h2>
-          <p>
-            Already have an account ?
-            <SignInLink to="/signin">Sign in</SignInLink>
-          </p>
-          <Form action="">
-            <Input type="text" placeholder="Your name" />
-            <Input type="text" placeholder="Username" />
-            <Input type="email" placeholder="Email address" />
-            <Input type="password" placeholder="Password" />
-            <CheckBox>
+      <SignInContainer>
+        <h2>Sign In</h2>
+        <p>
+          Don't have an account yet ?
+          <SignUpLink to="/signup"> Sign up</SignUpLink>
+        </p>
+        <Form action="">
+          <Input type="email" placeholder="Your username or email address" />
+          <Input type="password" placeholder="Password" />
+          <CheckBox>
+            <Label>
               <input type="checkbox" />
-              <Label>
-                I agree with <Links to="/privacy&policy"> Privacy Policy </Links>
-                 and 
-                <Links to="/term&conditions"> Terms of Use </Links>
-              </Label>
-            </CheckBox>
-            <Button>Sign Up</Button>
-          </Form>
-        </SignUpContainer>
-      </Container>
-    
+              Remember me
+            </Label>
+            <Links to="/">Forgot Password ? </Links>
+          </CheckBox>
+          <Button>Sign in</Button>
+        </Form>
+      </SignInContainer>
+    </Container>
   );
 };
 
-export default SignUp;
+export default SignIn;
