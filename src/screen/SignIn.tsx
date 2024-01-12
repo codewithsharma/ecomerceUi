@@ -35,10 +35,10 @@ const Button = styled.button`
 `;
 
 const SignInContainer = styled.div`
-  width: 400px;
+  width: 350px;
   display: flex;
   padding: 20px;
-  margin: 20px;
+
   flex-direction: column;
 
   h2 {

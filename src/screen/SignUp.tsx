@@ -16,7 +16,6 @@ const Container = styled.div`
     margin: auto;
     display: flex;
     flex-direction: column;
-  
     align-items: center;
     justify-content: center;
   }
@@ -31,7 +30,7 @@ const SignInLink = styled(Link)`
 const Button = styled.button`
   color: white;
   background-color: black;
-  padding: 8px;
+  padding: 10px;
   text-align: center;
   border: none;
   outline: none;
@@ -41,9 +40,8 @@ const Button = styled.button`
 const SignUpContainer = styled.div`
   display: flex;
   padding: 20px;
-  margin: 20px;
   flex-direction: column;
-  width: 400px;
+ width: 350px;
   
 
   h2 {
@@ -65,7 +63,7 @@ const Links = styled(Link)`
 `;
 
 const Label = styled.label`
-  font-size: 13px;
+  font-size: 11px;
   color: gray;
 `;
 
