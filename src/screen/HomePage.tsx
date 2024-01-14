@@ -1,4 +1,4 @@
-import React from 'react'
+
 import NotificationBar from '../components/NotificationBar'
 import Navbar from '../components/Navbar'
 import HompageCarousel from '../components/HompageCarousel'

@@ -1,4 +1,3 @@
-import React from 'react'
 import { FaArrowRightLong } from 'react-icons/fa6'
 import styled from 'styled-components'
 const Buton = styled.button`
